@@ -1,0 +1,85 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.app.amberclub">
+
+  <!-- Add for permission of map -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.android.vending.BILLING" />
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+      <!-- <uses-feature android:name="android.hardware.camera" /> -->
+
+
+    <queries>
+        <package android:name="com.snapchat.android" />
+    </queries>
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:exported="true"
+      android:icon="@mipmap/bootsplash_logo"
+      android:roundIcon="@mipmap/bootsplash_logo"
+      android:allowBackup="false"
+      android:theme="@style/BootTheme">
+          <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+          <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+      <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true" />
+
+  <meta-data
+            android:name="com.snapchat.kit.sdk.clientId"
+            android:value="bd162e57-c657-4ee3-a092-6c2eb21e1ba0" />
+            <meta-data
+            android:name="com.snapchat.kit.sdk.redirectUrl"
+            android:value="snapkitexample://main/auth" />
+
+        <meta-data android:name="com.snapchat.kit.sdk.scopes" android:resource="@array/snap_connect_scopes" />
+
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+      
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize"
+          android:exported="true"
+        >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+ <activity
+            android:name="com.snapchat.kit.sdk.SnapKitActivity"
+            android:launchMode="singleTask"
+             android:exported="true"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!--
+                  Enter the parts of your redirect url below
+                  e.g. if your redirect url is "myapp://snap-kit/oauth2"
+                  android:scheme="myapp"
+                  android:host="snap-kit"
+                  android:path="/oauth2"
+                -->
+                <data
+                    android:scheme="snapkitexample"
+                    android:host="main"
+                    android:path="/auth" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

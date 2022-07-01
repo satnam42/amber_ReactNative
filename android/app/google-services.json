@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "58873969543",
+    "project_id": "amberclub-c2ff7",
+    "storage_bucket": "amberclub-c2ff7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58873969543:android:0d69ef37b5280b151c7122",
+        "android_client_info": {
+          "package_name": "com.app.amberclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58873969543-nl7gv9j6mpoodkrj38lrcmpqdf78ctvk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.amberclub",
+            "certificate_hash": "3460465ee61174eb41b23f773e8506b8c444526a"
+          }
+        },
+        {
+          "client_id": "58873969543-j5tkuqrc3hekmdmfm5u807ggmnjuus0v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAGoKz9kddEyd6J7xJtTuymjFxI9r2g4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58873969543-j5tkuqrc3hekmdmfm5u807ggmnjuus0v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
